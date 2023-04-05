@@ -13,15 +13,22 @@ function hasTargetSum(array, target) {
 /* 
   Write the Big O time complexity of your function here
 */
-
+O(n^2)
 /* 
   Add your pseudocode here
 */
+function hasTargetSum(array, target):
+    for i from 0 to array.length - 1:
+        let complement = target - array[i]
+        for j from i + 1 to array.length - 1:
+            if array[j] equals complement:
+                return true
+    return false
 
 /*
   Add written explanation of your solution here
 */
-
+    because it has two nested loops
 // You can run `node index.js` to view these console logs
 if (require.main === module) {
   // add your own custom tests in here
@@ -40,3 +47,5 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+
